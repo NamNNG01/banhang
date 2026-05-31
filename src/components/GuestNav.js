@@ -5,7 +5,7 @@ export default function GuestNav() {
     return (
         <div className="flex items-center gap-5">
             <NavTab label="Đăng nhập" />
-            <Button label="Dùng thử miễn phí" variant="neon" href="/manifest.xml" download="manifest.xml" />
+            <Button label="Dùng thử miễn phí" variant="neon" href="/BangAI/manifest.xml" download="manifest.xml" />
         </div>
     )
 }
