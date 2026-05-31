@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sample Office Add-in Manifest for BangAI -->
+<OfficeApp 
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" 
+  xsi:type="TaskPaneApp">
+  
+  <Id>6b5b5c92-3d8b-4cbe-b4db-075b634898fc</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>BangAI</ProviderName>
+  <DefaultLocale>vi-VN</DefaultLocale>
+  <DisplayName DefaultValue="BangAI Excel Assistant" />
+  <Description DefaultValue="Học, Phân tích và Tự động hóa Excel bằng AI" />
+  <IconUrl DefaultValue="https://localhost:3000/assets/images/logo.png" />
+  <SupportUrl DefaultValue="https://bangai.vn/support" />
+  
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:3000" />
+  </DefaultSettings>
+  
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

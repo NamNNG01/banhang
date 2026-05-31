@@ -9,9 +9,11 @@ Button.propTypes = {
     label: PropTypes.string,
     onClick: PropTypes.func,
     className: PropTypes.string,
+    href: PropTypes.string,
+    download: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 };
 
-export default function Button({ variant = "default", label = "Button", onClick, className = "" }) {
+export default function Button({ variant = "default", label = "Button", onClick, className = "", href, download }) {
     const variantStyles = {
         default: "bg-blue-500 hover:bg-blue-600 text-white",
         neon: `
@@ -31,6 +33,19 @@ export default function Button({ variant = "default", label = "Button", onClick,
   active:brightness-90
 `,
     };
+
+    if (href) {
+        return (
+            <a 
+                href={href} 
+                download={download} 
+                className={cn(variantStyles[variant], 'w-fit inline-flex items-center justify-center select-none text-center font-medium', className)} 
+                onClick={onClick}
+            >
+                {label}
+            </a>
+        );
+    }
 
     return (
         <button className={cn(variantStyles[variant], 'w-fit', className)} onClick={onClick}>
